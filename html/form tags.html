@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!--form列表标签-->
+<body>
+    <!--input输入标签-->
+	<form>
+		姓名：<input value="呵呵">逗比<br>
+		昵称：<input value="哈哈" readonly><br>
+		名字：<input type="text" value="name" disabled=""><br>
+		密码：<input type="password" value="8800" size="50"><br>
+		性别：<input type="radio" name="gender" id="radio1" value="male" checked>男
+		      <input type="radio" name="gender" id="radio2" value="female">女<br>
+		爱好：<input type="checkbox" name="hobby" value="eat">吃饭
+			  <input type="checkbox" name="hobby" value="sleep">睡觉
+			  <input type="checkbox" name="hobby" value="bat">打豆豆
+	</form>	
+
+	<!--按钮标签-->
+	<form>
+		<input type="button" value="普通按钮"><br>
+		<input type="submit" value="提交按钮"><br>
+		<input type="reset" value="重置按钮"><br>
+		<input type="image" value="图片按钮1"><br>
+		<input type="image" width="800" src="../image/coastal.jpg", value="图片按钮2"><br>
+		<input type="file" value="文件按钮"><br>
+	</form>
+
+    <!--select下拉列表标签-->
+    <form>
+        <select>
+            <option>小学</option>
+			<option>初中</option>
+			<option>高中</option>
+			<option>大学</option>
+			<option selected="">研究生</option>
+        </select>
+        <br><br><br>
+
+        <select size="3">
+			<option>小学</option>
+			<option>初中</option>
+			<option>高中</option>
+			<option>大学</option>
+			<option>研究生</option>
+		</select>
+		<br><br><br>
+
+		<select multiple="">
+			<option>小学</option>
+			<option>初中</option>
+			<option selected="">高中</option>
+			<option selected="">大学</option>
+			<option>研究生</option>
+		</select>
+		<br><br><br>
+
+    </form>
+
+    <!--<textarea>标签：多行文本输入框-->
+	<form>
+		<textarea name="txtInfo" rows="4" cols="20" readonly>1、不爱摄影不懂设计的程序猿不是一个好的产品经理。</textarea>
+        <textarea name="txtInfo" rows="4" cols="20">
+            2、不爱摄影不懂设计的程序猿不是一个好的产品经理。</textarea>
+
+            <textarea name="txtInfo" rows="4" cols="20" readonly>
+        3、不爱摄影不懂设计的程序猿不是一个好的产品经理。</textarea>
+	</form>   
+    
+    <!--表单的语义化。比如，我们在注册一个网站的信息的时候，有一部分是必填信息，有一部分是选填信息，这个时候可以利用表单的语义化。-->
+    <form>
+		<fieldset>
+		<legend>账号信息</legend>
+		姓名：<input value="呵呵" >逗比<br>
+		密码：<input type="password" value="pwd" size="50"><br>
+		</fieldset>
+
+		<fieldset>
+		<legend>其他信息</legend>
+		性别：<input type="radio" name="gender" value="male" checked="">男
+			  <input type="radio" name="gender" value="female" >女<br>
+		爱好：<input type="checkbox" name="love" value="eat">吃饭
+			  <input type="checkbox" name="love" value="sleep">睡觉
+			  <input type="checkbox" name="love" value="bat">打豆豆
+		</fieldset>
+	</form>
+
+    <!--<label>标签-->
+    <input type="radio" name="gender" id="male" /> <label for="male">男</label>
+    <input type="radio" name="gender" id="female" /> <label for="female">女</label>
+
+    <input type="checkbox" id="kk" />
+    <label for="kk">10天内免登陆</label>
+
+</body>
+</html>
