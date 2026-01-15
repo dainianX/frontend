@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #F7F7F7;
+        }
+
+        form {
+            max-width: 640px;
+            min-width: 320px;
+            width: 100%;
+            margin: 0 auto;
+            font-family: "Microsoft Yahei";
+            font-size: 20px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+        }
+
+        input {
+            width: 100%;
+            height: 30px;
+            margin: 10px 0;
+            display: block;
+        }
+    </style>
+</head>
+<!--H5中新增的表单类型
+    email 只能输入email格式。自动带有验证功能。
+    tel 手机号码。
+    url 只能输入url格式。
+    number 只能输入数字。
+    search 搜索框
+    range 滑动条
+    color 拾色器
+    time 时间
+    date 日期
+    datetime 时间日期
+    month 月份
+    week 星期   -->
+<body>
+    <form>
+        <input type="text" list="myData">
+        <datalist id="myData">
+            <option>本科</option>
+            <option>研究生</option>
+            <option>不明</option>
+        </datalist>
+    </form>
+    <form action="">
+    <fieldset>
+        <legend>表单类型</legend>
+        <label for="">
+            email: <input type="email" name="email" required>
+        </label>
+        <label for="">
+            color: <input type="color" name="color">
+        </label>
+        <label for="">
+            url: <input type="url" name='url'>
+        </label>
+        <label for="">
+            number: <input type="number" step="3" name="number">
+        </label>
+        <label for="">
+            range: <input type="range" name="range" value="100">
+        </label>
+        <label for="">
+            search: <input type="search" name="search">
+        </label>
+        <label for="">
+            tel: <input type="tel" name="tel">
+        </label>
+        <label for="">
+            time: <input type="time" name="time">
+        </label>
+        <label for="">
+            date: <input type="date" name="date">
+        </label>
+        <label for="">
+            datetime: <input type="datetime">
+        </label>
+        <label for="">
+            week: <input type="week" name="week">
+        </label>
+        <label for="">
+            month: <input type="month" name="month">
+        </label>
+        <label for="">
+            datetime-local: <input type="datetime-local" name="datetime-local">
+        </label>
+        <input type="submit", value="提交">
+    </fieldset>
+</form>
+
+    <!--表单属性-->
+    <form action>
+        <fieldset>
+            <legend>表单属性</legend>
+            <label for>
+                用户名: <input type="text" placeholder="例如：smyahe" autofocus name="username" autocomplete="on" required>
+            </label>
+            <label for>
+                电话: <input type="tel" placeholder="1开头，11位数字" pattern="1\d{10}">
+            </label>
+            <label for>
+                multiple的表单: <input type="file" multiple>
+            </label>
+
+            <!--上传文件-->
+            <input type="file" name="file" multiple>
+            <input type="submit">
+        </fieldset>
+    </form>
+    
+    <!--表单事件-->
+    <form action="">
+        <fieldset>
+            <legend>表单事件</legend>
+            <label for>
+                邮箱: <input type="email" name="" id="txt1">
+            </label>
+            <label for>
+                输入的次数统计: <input type="text" name="" id="txt2">
+            </label>
+            
+            <input type="submit" value="提交">
+        </fieldset>
+    </form>
+    <script>
+        var txt1 = document.getElementById('txt1')
+        var txt2 = document.getElementById('txt2')
+        var num = 0
+
+        txt1.oninput = function() {
+            num++;
+            txt2.value = num;
+        }
+        txt2.oninvalid = function() {
+            this.setCustomValidity('亲，请输入正确哦')
+        }
+    </script>
+</body>
+</html>
